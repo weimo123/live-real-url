@@ -40,7 +40,7 @@ public class GetBilibiliRealUrl {
         JSONObject response = HttpRequest.create(room_url).get().getBodyJson();
         JSONArray durl = response.getJSONObject("data").getJSONArray("durl");
         if (durl != null) {
-            String result = durl.getJSONObject(0).getString("cc/weimo/real/url");
+            String result = durl.getJSONObject(0).getString("url");
             String pattern_result = result.substring(result.indexOf("/live_"), result.indexOf(".m3u8") + ".m3u8".length());
             return "https://cn-hbxy-cmcc-live-01.live-play.acgvideo.com/live-bvc" + pattern_result;
         } else {

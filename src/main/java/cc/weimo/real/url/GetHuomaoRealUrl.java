@@ -51,7 +51,7 @@ public class GetHuomaoRealUrl {
         for (int i = 0; i < streamList.size(); i++) {
             JSONObject object = streamList.getJSONObject(i);
             if (object.getIntValue("default") == 1) {
-                return object.getJSONArray("list").getJSONObject(0).getString("cc/weimo/real/url");
+                return object.getJSONArray("list").getJSONObject(0).getString("url");
             }
         }
 

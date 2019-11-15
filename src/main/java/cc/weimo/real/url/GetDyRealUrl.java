@@ -142,7 +142,7 @@ public class GetDyRealUrl {
         if (response.getIntValue("code") != 0) {
             return null;
         }
-        String real_url = (response.getJSONObject("data")).getString("cc/weimo/real/url");
+        String real_url = (response.getJSONObject("data")).getString("url");
         if (real_url.contains("mix=1")) {
             return mix_room(rid);
         } else {
