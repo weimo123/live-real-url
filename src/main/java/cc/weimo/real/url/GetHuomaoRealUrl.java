@@ -10,6 +10,9 @@ import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * 获取火猫直播的真实流媒体地址。
+ */
 public class GetHuomaoRealUrl {
 
     private static final Pattern PATTERN = Pattern.compile("(?<=var channelOneInfo = )(\\{.*\\})(?=;)");
